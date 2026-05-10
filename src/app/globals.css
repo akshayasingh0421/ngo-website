@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blue-300: #DCEBFF;
+  --color-blue-400: #8BB8FF;
+  --color-blue-500: #5f7b94;
+  --color-blue-600: #324e66;
+  --color-slate-700: #2F5D8C;
+  --color-sky-400: #8BB8FF;
+  --color-slate-800: #1E293B;
+  --color-slate-900: #0F172A;
+  --color-gray-500: #64748B;
+  --color-gray-200: #E2E8F0;
+  --color-slate-50: #F8FAFC;
+  --color-blue-50: #EFF6FF;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1E293B;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(-5%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
